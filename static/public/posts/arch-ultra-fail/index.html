@@ -1,0 +1,158 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Почти история успеха: как поставить Арч и всё потерять  | Squizduos SlowBlog</title>
+
+	<meta name="author" content="Semyon Bochkaryov"> 
+	
+	<meta name="description" content="Это уютный уголок интернета, где есть только книги и Open Source"> <meta name="keywords" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Squizduos SlowBlog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/custom.css" rel="stylesheet" type="text/css">
+	
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+</head>
+
+
+
+<body>
+	<header id="header" class="inner"><h1>Squizduos SlowBlog</h1>
+<nav id="main-nav"><ul>
+	<li><a href="/">Главная страница</a></a></li>
+	<li><a href="/archives">Архивы записей</a></li>
+	<li><a href="/innopolis">Иннополис</a></li>
+	<li><a href="/contact">Контакты</a></li>
+	<li><a href="http://github.com/squizduos">GitHub</a></li>
+</ul>
+</nav>
+
+
+</header>
+
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Почти история успеха: как поставить Арч и всё потерять</h2>
+	<div class="entry-content"><p>Вообще, историю моих скитаний по линукс-дистрибутивам можно рассказывать долго, но я расскажу свежую и относительно весёлую: как я на Арч мигрировал.</p>
+
+<!-- more -->
+
+
+<h3>1. Как я всё потерял</h3>
+
+<p>Изначальной предпосылкой было то, что меня достал Crunchbang. Этот дистрибутив на базе Debian с Openbox на борту хорош всем, на самом деле, кроме одного: он построен на Debian Stable. Stable недаром зовётся стабильным - весь софт в нём не просто старый, а ОЧЕНЬ старый, и обновляться на актуальные версии не спешит. Как следствие, ни свежий MySQL Workbench поставить не получится, ни Steam, даже Iron Browser, собранный с свежим glibc, не запустится. В итоге я решил переехать на Debian Testing, заменил репозитории и обновился. Crunchbang развалился.</p>
+
+<p>Точнее, развалилась их фирменная тема wardolf, поставляемая с дистрибутивом - да и многие GNOME-утилиты, поставляемые с дистрибутивом, стали выглядеть в стиле этого самого GNOME 3, что не очень приятно. В итоге, я поставил KDE, настроил его и успокоился - теперь это уже был не Crunchbang, а Debian Testing, и почти всё работало. Но дьявол - он в мелочах. Стандартные настройки Crunchbang явно конфликтовали с настройками Testing, в итоге, я получал очень весёлые глюки. Прошёл месяц, и это меня достало, я решил снова переустанавливать систему.</p>
+
+<p>Выбор у меня был из двух <del>стульев</del> вариантов - либо ставить Debian Testing с нуля, либо поставить какой-то другой дистрибутив. Тут уже я вспомнил про Arch - невероятно удобный компактный линукс, у которого ещё и пакетный менеджер реактивный, и AUR (огромный репозиторий с сторонним софтом) присутствует, причём часто в нём есть софт, который нельзя найти ни в одном дистрибутиве (например, шрифты от Microsoft). Таким образом, решение было принято - ставим Арч. Вот тут и началось.</p>
+
+<p>У меня в ноутбуке стоит два жёстких диска: стандартный SSD на 120 гигабайт с системой и софтом, и HDD на 500 гигабайт с фильмами, музыкой и данными. Первый обозначен в системе как /dev/sda, второй как /dev/sdb, флешка, на которую я записывал установочный образ Арча - /dev/sdd. Я перенёс все данные на второй жёсткий диск, скачал образ archlinux-2014.10.01.iso и набрал в консоли:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dd if=archlinux-2014.10.01.iso of=/dev/sd**b**</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Да, в этом была моя огромная ошибка, я по привычке набрал /dev/sdb (до покупки SSD там всегда была флешка), в итоге, я сломал файловую систему. Полностью. Исправлять было уже поздно, я кинулся за внешним HDD и начал копировать на него всё содержимое перезатёртого диска (оно, несмотря на зверскую экзекуцию, всё ещё читалось). Успел скопировать IT-книги и фильмы - потом до ОС дошло, что я только что натворил, и раздел перестал читаться.</p>
+
+<p>Следующие 14 часов я всеми мыслимыми усилиями восстанавливал содержимое жёсткого диска. В ход пошёл R-Studio, R-Linux, ext4undelete, testdisk и прочие утилиты для восстановления данных - но восстановить ими почти ничего не удалось, файловая система была безнадёжно испорчена. Особенно жалко фотографии - у меня не осталось их резервной копии. Но отступать было уже поздно, и я со второй попытки я записал установочный образ Arch Linux на флэшку.</p>
+
+<h3>2. Как я установил Arch</h3>
+
+<p>С начала установки прошло уже 24 часа (начинал я ставить вечером среды, а к установке приступил в четверг вечером), и мелкий облом не заставил себя ждать - образ с арчем, который сейчас лежит на archlinux.org, не работает. Причина, если кратко - внутренний раздел с RootFS обозван ARCH_201410, как и сам диск, в итоге, система не может понять, какой из двух разделов ей монтировать и отказывается грузиться. Если надумаете ставить Арч - грузите лучше образ от 2014.09.03, он работает, а разницы в процессе установки нет.</p>
+
+<p><img src="https://pbs.twimg.com/media/B1NTkJgIAAEmkzm.jpg:large" width="600" alt="" /></p>
+
+<p>Далее установка проходит согласно <a href="https://wiki.archlinux.org/index.php/Installation_guide">этой</a> инструкции без особых проблем, и базовая система у вас уже стоит. Однако, я тут наткнулся на второй косяк - поскольку я хотел сразу систему с KDE, то я поставил полный пакет kde, но этот пакет не потянул за собой xorg-server! Как kde будет работать без xorg - вопрос актуальный. У меня не заработал - после загрузки установленной ОС остался наедине с чёрной консолью и даже без возможности доустановить пакеты (кстати, тут косяк №3 - если у вас Wi-Fi, обязательно поставьте пакет dialog при установке системы, иначе стандартный wifi-menu не заработает, а при отсутствующем NetworkManager или wicd - это единственная возможность поднять Wi-Fi из консоли.</p>
+
+<p>После доустановки xorg-server и NetworkManager (кстати, не забудьте поставить их в автозагрузку - для этого надо набрать <em>systemctl enable kdm</em> и <em>systemctl enable NetworkManager</em>), жизнь становится куда веселее. Но не в моём случае - после установки я захотел скопировать спасённые данные обратно на жёсткий диск. Копирование прошло без проблем, но я решил заодно монтировать этот диск при загрузке и прописал его в fstab. Да, тот самый раздел, на котором 14 часов искались файлы. В итоге, при загрузке система начала проверять диск на ошибки, а я прошёл весёлый квест, заключающийся в бесперерывном нажатии кнопки Enter. Три часа подряд. В конце, я не выдержал и поставил отвёртку на клавишу - дело пошло куда веселее</p>
+
+<p><img src="https://pbs.twimg.com/media/B1OevLdCAAAqkxN.jpg" width="600" alt="" /></p>
+
+<p>Ещё через два часа проверка закончилась, и вот я пишу уже из Арча.</p>
+
+<p>Какая мораль у этой истории? Их целых три: не меняйте ОС без особой нужды, делайте резервные копии важных файлов, читайте документацию перед установкой незнакомой ОС. Тогда вам не придётся сидеть над установкой 36 часов, как мне.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2014-10-31T12:40:23+03:00" pubdate data-updated="true">31.10.2014</time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>
+
+</div>
+
+
+	
+		
+		<span class="sharing">
+		  <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="big" data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"></div>
+
+		 </span>
+		
+	
+</div>
+
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'squizduos';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://squizduos.me/posts/arch-ultra-fail/';
+        var disqus_url = 'http://squizduos.me/posts/arch-ultra-fail/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+  <section>
+    <h3>Комментарии</h3>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</article>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+ Semyon Bochkaryov 
+<br>Follow me at 
+<a href=http://twitter.com/squizduos>Twitter</a> 
+<a href=http://github.com/squizduos>Github</a></a> 
+
+<br>
+Powered by Octopress.
+</footer>
+	
+
+</body>
+</html>

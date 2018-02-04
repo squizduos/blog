@@ -1,0 +1,11 @@
+	article .entry-content p img
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+	article .entry-content p
+{
+	text-align: justify;
+}
