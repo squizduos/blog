@@ -1,8 +1,5 @@
 image: monachus/hugo
 
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
 pages:
   script:
   - hugo --theme=blackburn
