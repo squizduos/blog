@@ -3,7 +3,7 @@ image: monachus/hugo
 
 pages:
   script:
-  - hugo
+  - hugo --theme=blackburn
   artifacts:
     paths:
     - public
