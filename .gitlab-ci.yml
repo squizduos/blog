@@ -1,0 +1,24 @@
+image: mrbits/hugo-ci
+
+stages:
+  - deploy
+
+before_script:
+  - eval $(ssh-agent -s)
+  - echo "$SSH_KEY" > /tmp/key && chmod 0400 /tmp/key && ssh-add /tmp/key
+  - mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+production:
+  stage: deploy
+  script:
+    - hugo --theme=blackburn
+    - cd public
+    - git init
+    - git remote add github.com/squizduos/squizduos.github.io
+    - git add .
+    - git commit
+    - git push
+  only:
+    - master
+  environment: production
