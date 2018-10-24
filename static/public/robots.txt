@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://squizduos.me/sitemap.xml 
