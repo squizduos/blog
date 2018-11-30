@@ -55,7 +55,7 @@ paginate = 10
     name = "Донат"
     pre = "<i class='fa fa-money fa-fw'></i>"
     weight = 3
-    url = "https://money.yandex.ru/to/410014808642371"
+    url = "https://yasobe.ru/na/squizduos_ru"
 
 [social]
   vkontakte = "squizduos"
