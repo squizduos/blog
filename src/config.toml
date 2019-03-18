@@ -2,7 +2,7 @@ baseurl = "http://www.squizduos.ru/"
 title = "Squizduos Slowblog"
 author = "Semyon Bochkaryov"
 # Shown in the side menu
-copyright = "&copy; 2017 squizduos.<br>Все права защищены"
+copyright = "&copy; 2019 squizduos.<br>Все права защищены"
 canonifyurls = true
 paginate = 10
 languageCode = "ru-ru"
