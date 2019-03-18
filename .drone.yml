@@ -1,0 +1,24 @@
+pipeline:
+  build:
+    image: squizduos/hugo-alpine:latest
+    commands:
+     - hugo check
+     - hugo -d ../public -s ./src
+    when:
+      branch: [ master ]
+  deploy:
+    image: plugins/docker
+    registry: registry.squizduos.ru
+    repo: registry.squizduos.ru/squizduos/squizduos.ru
+    tags: latest
+    secrets: [ docker_username, docker_password ]
+    when:
+      branch: [ master ]
+  telegram:
+    image: appleboy/drone-telegram
+    secrets: [ telegram_token ]
+    token: ${TELEGRAM_TOKEN}
+    to: 57439615
+    message: Сборка www.squizduos.ru завершена.
+    when:
+      branch: [ master ]

@@ -1,0 +1,69 @@
+baseurl = "http://www.squizduos.ru/"
+title = "Squizduos Slowblog"
+author = "Semyon Bochkaryov"
+# Shown in the side menu
+copyright = "&copy; 2017 squizduos.<br>Все права защищены"
+canonifyurls = true
+paginate = 10
+languageCode = "ru-ru"
+theme="blackburn"
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  # Shown in the home page
+  subtitle = "High tech, low life"
+  brand = "Меню"
+  googleAnalytics = "UA-64612974-1"
+  disqus = "squizduos"
+  # CSS name for highlight.js
+  highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Главная"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 0
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "Блог"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "post"
+    url = "/post/"
+  [[menu.main]]
+    name = "Иннополис"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "topic"
+    url = "/topics/innopolis"
+  [[menu.main]]
+    name = "Работа"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/hire/"
+  [[menu.main]]
+    name = "Контакты"
+    pre = "<i class='fa fa-phone fa-fw'></i>"
+    weight = 3
+    url = "/contact/"
+  [[menu.main]]
+    name = "Донат"
+    pre = "<i class='fa fa-money fa-fw'></i>"
+    weight = 3
+    url = "https://yasobe.ru/na/squizduos"
+
+[social]
+  vkontakte = "squizduos"
+  twitter = "squizduos"
+  facebook = "squizduos"
+  instagram = "squizduos"
+  linkedin = "squizduos"
+  github = "squizduos"
+  bitbucket = "squizduos"
