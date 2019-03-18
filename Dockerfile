@@ -7,7 +7,7 @@ RUN apk add --update nginx && rm -rf /var/cache/apk/*
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY public/ /usr/share/nginx/html/
 
-EXPOSE 8080
+EXPOSE 80
 
 # root user will run 'nginx: master process'
 # nobody user will run 'nginx: worker process' as dictated in the nginx.non-root.conf
