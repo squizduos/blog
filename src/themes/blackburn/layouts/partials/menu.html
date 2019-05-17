@@ -1,0 +1,16 @@
+<nav class="site-nav">
+
+    {{ range .Site.Menus.main }}
+        <a class="page-link" href="{{ .URL }}">
+            {{ .Pre }} 
+            {{ .Name }}
+        </a>
+    {{ end }}
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <a class="page-link" href="{{ .RelPermalink }}">
+        <i class="fa fa-rss fa-fw"></i>RSS
+    </a>
+    {{ end }}
+
+</nav>

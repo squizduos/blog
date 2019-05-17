@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd blog/
+cd src/
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 

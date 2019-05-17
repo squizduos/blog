@@ -3,7 +3,10 @@
 <div class="header">
   <h1>{{ .Title }}</h1>
   <h2>{{ .Site.Params.subtitle }}</h2>
+
+  {{ partial "menu.html" . }}
 </div>
+
 
 <div class="content">
   {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
