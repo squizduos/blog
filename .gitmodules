@@ -1,0 +1,4 @@
+[submodule "src/public"]
+	path = src/public
+	url = git@github.com:squizduos/squizduos.github.io.git
+	branch = master
