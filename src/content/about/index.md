@@ -26,8 +26,8 @@ footer: true
 
 Мои резюме:
 
- * на русском языке: [на hh.ru](https://hh.ru/resume/1324276fff01c796bb0039ed1f6d35326d3230),  [pdf](/hire/CV_RU.pdf)
- * in English: [на hh.ru](http://hh.ru/resume/3187e868ff03195ad80039ed1f66464c704169), [pdf](/hire/CV_US.pdf)
+ * на русском языке: [на hh.ru](https://hh.ru/resume/1324276fff01c796bb0039ed1f6d35326d3230),  [pdf](/about/CV_RU.pdf)
+ * in English: [на hh.ru](http://hh.ru/resume/3187e868ff03195ad80039ed1f66464c704169), [pdf](/about/CV_US.pdf)
 
 **Buzzwords**: Python, Django, SQL, PostgreSQL, Git, Linux, REST API, парсеры и краулеры
 
