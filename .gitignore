@@ -1,2 +1,3 @@
-# src/public/
-resources/
+public/
+src/resources/
+bin/hugo*
