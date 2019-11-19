@@ -1,21 +1,22 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<div class="header">
-  <h1>{{ .Title }}</h1>
-  <h2>{{ .Description }}</h2>
+<div id="main">
+    <div class="header">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Description }}</h2>
 
-  {{ partial "menu.html" . }}
+        {{ partial "menu.html" . }}
+    </div>
+    <div class="content">
+        {{ partial "post_meta.html" . }}
+
+        {{ .Content }}
+    
+        {{ partial "prev_next_post.html" . }}
+    
+        {{ partial "disqus.html" . }}
+    </div>
+   
 </div>
-<div class="content">
 
-  {{ partial "post_meta.html" . }}
-
-  {{ .Content }}
-
-  {{ partial "prev_next_post.html" . }}
-
-  {{ partial "disqus.html" . }}
-
-</div>
-
-{{ partial "footer.html" . }}
+{{ end }}

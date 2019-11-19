@@ -1,4 +1,4 @@
-baseurl: 'https://www.squizduos.ru/'
+# baseurl: 'https://www.squizduos.ru/'
 title: Squizduos Slowblog
 copyright: '&copy; 2019 squizduos'
 canonifyurls: true
@@ -15,12 +15,41 @@ indexes:
 
 params:
   author: Semyon Bochkaryov
+  email: squizduos@gmail.com
   subtitle: 'High tech, low life'
-  brand: squizduos.ru
+  brand: squizduos.com
   googleAnalytics: UA-64612974-1
   disqus: squizduos
-  highlightjs: androidstudio
+  highlightjs: monokai
   dateFormat: '02.01.2006 15:04'
+  topics: 10
+  parental: true
+  buildinfo: true
+  contacts:
+    - name: Telegram
+      pre: <i class='fab fa-telegram fa-fw'></i>
+      weight: 1
+      url: https://telete.in/squizduos
+    - name: ВКонтакте
+      pre: <i class='fab fa-vk fa-fw'></i>
+      weight: 2
+      url: https://vk.com/squizduos
+    - name: Twitter
+      pre: <i class='fab fa-twitter-square fa-fw'></i>
+      weight: 3
+      url: https://twitter.com/squizduos
+    - name: Instagram
+      pre: <i class='fab fa-instagram fa-fw'></i>
+      weight: 4
+      url: https://instagram.com/squizduos
+    - name: LinkedIn
+      pre: <i class='fab fa-linkedin fa-fw'></i>
+      weight: 5
+      url: https://linkedin.com/in/squizduos
+    - name: GitHub
+      pre: <i class='fab fa-github-square fa-fw'></i>
+      weight: 6
+      url: https://github.com/squizduos
 
 menu:
   main:
@@ -29,27 +58,21 @@ menu:
       weight: 1
       identifier: home
       url: /
-    - name: Проекты
-      pre: <i class='fa fa-desktop fa-fw'></i>
-      weight: 2
-      identifier: topic
-      url: /projects/
-    - name: О блоге
-      pre: <i class='fa fa-phone fa-fw'></i>
-      weight: 3
-      url: /about/
-  blogs:
-  - name: Channel 11
-    pre: <i class='fab fa-telegram fa-fw'></i>
-    weight: 1
-    url: 'https://tlg.name/ch_11'
-  - name: Nova the Hedgehog
-    pre: <i class='fab fa-twitter-square fa-fw'></i>
-    weight: 2
-    url: 'https://twitter.com/squizduos'
-
-social:
-  vk: squizduos
-  linkedin: squizduos
-  github: squizduos
-  bitbucket: squizduos
+    # - name: Проекты
+    #   pre: <i class='fa fa-desktop fa-fw'></i>
+    #   weight: 3
+    #   identifier: projects
+    #   url: /projects/
+    # - name: Заметки
+    #   pre: <i class='fas fa-sticky-note fa-fw'></i>
+    #   weight: 4
+    #   identifier: notes
+    #   url: /notes/
+    - name: Работа
+      pre: <i class="fas fa-file-alt fa-fw"></i>
+      weight: 5
+      url: /hire/
+    - name: Channel 11
+      pre: <i class='fab fa-telegram fa-fw'></i>
+      weight: 6
+      url: https://telete.in/ch_11

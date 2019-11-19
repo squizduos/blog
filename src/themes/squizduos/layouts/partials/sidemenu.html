@@ -9,20 +9,26 @@
     <a class="pure-menu-heading brand" href="/">{{ . | safeHTML }}</a>
   {{ end }}
 
-  <div class="pure-menu">
-    <ul class="pure-menu-list">
-      <li class="pure-menu-item"><p class="pure-menu-title">Филиалы</p></li>
-      {{ range .Site.Menus.blogs }}
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" {{ printf "href=%q" .URL | safeHTMLAttr }}>{{ .Pre }}{{ .Name }}</a>
-        </li>
-      {{end}}
-    </ul>
-  </div>
+
 
   {{ partial "social.html" . }}
 
   {{ partial "topics.html" . }}
 
-  {{ partial "copyright.html" . }}
+  
+  <div id="bottom">
+
+      {{ if .Site.Params.parental }}
+        {{ partial "parental.html" . }}
+      {{ end }}
+  
+      {{ partial "copyright.html" . }}
+
+  
+    {{ if .Site.Params.buildinfo }}
+      {{ partial "info.html" . }}
+    {{ end }}
+  
+  </div>
+  
 </div>

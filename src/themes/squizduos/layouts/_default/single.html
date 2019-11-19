@@ -1,16 +1,18 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<div class="header">
-  <h1>{{ .Title }}</h1>
-  <h2>{{ .Description }}</h2>
+<div id="main">
+    <div class="header">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Description }}</h2>
 
-  {{ partial "menu.html" . }}
+        {{ partial "menu.html" . }}
+    </div>
+
+    {{ partial "toc.html" . }}
+
+    <div class="content">
+        {{ .Content }}
+    </div>
 </div>
 
-{{ partial "toc.html" . }}
-
-<div class="content">
-  {{ .Content }}
-</div>
-
-{{ partial "footer.html" . }}
+{{ end }}

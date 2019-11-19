@@ -1,20 +1,23 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-<div class="header">
-  <h1>{{ .Title }}</h1>
-  <h2>{{ .Site.Params.subtitle }}</h2>
-  
-  {{ partial "menu.html" . }}
-</div>
-<div class="content">
-  {{ range .Data.Pages.GroupByDate "2006" }}
-  <h2>{{ .Key }}</h2>
-  <ul>
-  {{ range .Pages }}
-    {{ .Render "li" }}
-  {{ end }}
-  </ul>
-  {{ end }}
+<div id="main">
+    <div class="header">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Site.Params.subtitle }}</h2>
+
+        {{ partial "menu.html" . }}
+    </div>
+
+    <div class="content">
+        {{ range .Data.Pages.GroupByDate "2006" }}
+        <h2>{{ .Key }}</h2>
+        <ul>
+        {{ range .Pages }}
+          {{ .Render "li" }}
+        {{ end }}
+        </ul>
+        {{ end }}
+      </div>
 </div>
 
-{{ partial "footer.html" . }}
+{{ end }}

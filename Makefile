@@ -5,8 +5,8 @@ PUBLIC_DIR = public/
 build:
 	$(HUGO_EXEC) -s ${CURDIR}/$(SRC_DIR) -d ${CURDIR}/public
 
-server:
-	$(HUGO_EXEC) server -s ${CURDIR}/$(SRC_DIR) -d ${CURDIR}/public
+preview:
+	$(HUGO_EXEC) serve -s ${CURDIR}/$(SRC_DIR) -d ${CURDIR}/public
 
 deploy:
 	git add .
