@@ -1,36 +1,13 @@
 <div class="pure-menu social">
   <ul class="pure-menu-list">
-      <li class="pure-menu-item"><p class="pure-menu-title">Контакты</p></li>
-
+    <li class="pure-menu-item"><p class="pure-menu-title">Контакты</p></li>
     {{ range .Site.Params.contacts }}
       <li class="pure-menu-item">
         <a class="pure-menu-link" href="{{ .url }}" target="_blank">
-            {{ .pre | safeHTML }} 
+            <i class="fab {{ .icon }} fa-fw"></i>
             {{ .name }}
         </a>
       </li>
     {{ end }}
-
   </ul>
 </div>
-
-{{ with .Site.Params.sources }}
-  <div class="pure-menu social">
-      <ul class="pure-menu-list">
-        <li class="pure-menu-item"><p class="pure-menu-title">Исходники</p></li>
-        
-        {{ with .github }}
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="https://github.com/{{ . }}" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
-        </li>
-        {{ end }}
-    
-        {{ with .gitlab }}
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="{{ . }}" target="_blank"><i class="fab fa-gitlab fa-fw"></i>GitLab</a>
-        </li>
-        {{ end }}
-        
-      </ul>
-    </div>
-{{ end }}

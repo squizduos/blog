@@ -17,40 +17,48 @@ params:
   author: Semyon Bochkaryov
   email: squizduos@gmail.com
   subtitle: 'High tech, low life'
-  brand: squizduos.com
   googleAnalytics: UA-64612974-1
   disqus: squizduos
   highlightjs: monokai
   dateFormat: '02.01.2006 15:04'
+  sideMenu:
+    topics: 10
+    parental: true
+    buildInfo: true
   topics: 10
   parental: true
   buildinfo: true
   contacts:
     - name: Telegram
-      pre: <i class='fab fa-telegram fa-fw'></i>
+      icon: fa-telegram
       weight: 1
       url: https://telete.in/squizduos
     - name: ВКонтакте
-      pre: <i class='fab fa-vk fa-fw'></i>
+      icon: fa-vk
       weight: 2
       url: https://vk.com/squizduos
     - name: Twitter
-      pre: <i class='fab fa-twitter-square fa-fw'></i>
+      icon: fa-twitter-square
       weight: 3
       url: https://twitter.com/squizduos
     - name: Instagram
-      pre: <i class='fab fa-instagram fa-fw'></i>
+      icon: fa-instagram
       weight: 4
       url: https://instagram.com/squizduos
     - name: LinkedIn
-      pre: <i class='fab fa-linkedin fa-fw'></i>
+      icon: fa-linkedin
       weight: 5
       url: https://linkedin.com/in/squizduos
     - name: GitHub
-      pre: <i class='fab fa-github-square fa-fw'></i>
+      icon: fa-github-square
       weight: 6
       url: https://github.com/squizduos
-
+    - name: GitLab
+      icon: fa-gitlab
+      weight: 7
+      url: https://git.squizduos.com/
+  custom_css:
+    - css/pc-tab.css
 menu:
   main:
     - name: Главная

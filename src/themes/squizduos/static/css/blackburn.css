@@ -16,7 +16,7 @@ a:visited {
 
 .small-print {
   font-size: 0.9em;
-  margin: 0.6em;
+  margin: 1em;
 }
 
 .parental {
@@ -24,13 +24,18 @@ a:visited {
   padding: 10px 10px 10px 10px;
   font-size: 80%;
   margin-bottom: 20px;
+  margin: 1em;
 }
 
 .parental a {
   padding: 0 !important;
 }
 
-.parental .age {
+.parental .age  {
+  font-size: 90%;
+}
+
+.parental .age span {
   color: red;
   font-weight: 700;
 }

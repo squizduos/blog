@@ -9,24 +9,19 @@
     <a class="pure-menu-heading brand" href="/">{{ . | safeHTML }}</a>
   {{ end }}
 
-
-
   {{ partial "social.html" . }}
 
   {{ partial "topics.html" . }}
-
   
   <div id="bottom">
-
-      {{ if .Site.Params.parental }}
-        {{ partial "parental.html" . }}
-      {{ end }}
+    {{ if .Site.Params.parental }}
+      {{ partial "parental.html" . }}
+    {{ end }}
   
-      {{ partial "copyright.html" . }}
+    {{ partial "copyright.html" . }}
 
-  
     {{ if .Site.Params.buildinfo }}
-      {{ partial "info.html" . }}
+      {{ partial "buildinfo.html" . }}
     {{ end }}
   
   </div>
