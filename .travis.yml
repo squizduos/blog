@@ -1,0 +1,18 @@
+dist: bionic
+language: generic
+install:
+  - sudo apt-get update
+  - sudo apt-get install -y make
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_0.59.1_Linux-64bit.deb
+  - sudo dpkg -i hugo_0.59.1_Linux-64bit.deb
+script:
+  - make build
+deploy:
+  on:
+    branch: master
+  github_token: $GITHUB_TOKEN
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  repo: squizduos/squizduos.github.io
+  target_branch: master
