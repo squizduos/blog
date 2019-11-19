@@ -33,6 +33,7 @@ a:visited {
 
 .parental .age  {
   font-size: 90%;
+  text-decoration: none;
 }
 
 .parental .age span {

@@ -60,6 +60,7 @@ params:
       url: https://git.squizduos.com/
   custom_css:
     - css/pc-tab.css
+    - css/modal.css
 menu:
   main:
     - name: Главная

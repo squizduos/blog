@@ -1,11 +1,103 @@
 <div>
-    
-        <div class="small-print parental" 
-            data-toggle="tooltip" data-placement="right" 
-            title='Данный блок размещается в соответствии с требованиями Федерального закона от 29 декабря 2010 года № 436-ФЗ 
-            "О защите детей от информации, причиняющей вред их здоровью и развитию."'
-        >
-            <a href="/legal/" class="age"><span>18+</span> Запрещено для детей</a>
+    <div class="small-print parental" >
+        <a href="#" id="legal" class="age"><span>18+</span> Запрещено для детей</a>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Правовая информация</h3>
+          <ol>
+                <li>
+                    <p>
+                        Владельцем сайта, а также автором всех текстовых, графических, иных материалов на сайте <em>squizduos.com</em>, если иное не указано отдельно, 
+                        является Бочкарёв Семён Валерьевич (squizduos). <strong>Официальным контактным адресом</strong> для взаимодействия с государственными органами
+                        является электронный адрес <a href="mailto:me@squizduos.com" class="bold">me@squizduos.com</a>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Сайт <em>squizduos.com</em> работает в юрисдикции <strong>Российской Федерации</strong>, а также соблюдает законы Российской Федерации. 
+                        Размещение материалов и/или комментариев, нарушающих законы Российской Федерации, запрещается.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Сайт <em>squizduos.com</em> не является средством массовой информации. Все размещенные материалы отражают личную позицию автора 
+                        и опубликованы на условиях <strong>«как есть»</strong>. Автор не несет ответственности за некорректное, неверное или 
+                        противозаконное использование любых материалов.
+                    </p>
+                </li>
+                <li>
+                    <p class="highlight">
+                        Все материалы, размещенные на данном сайте, имеют возрастное ограничение <strong>18+ Запрещено для детей</strong> в соответствии с 
+                        требованиями <a href="http://pravo.gov.ru/proxy/ips/?docbody&amp;nd=102144583">Федерального закона от 29 декабря 2010 года № 436-ФЗ</a> 
+                        “О защите детей от информации, причиняющей вред их здоровью и развитию".
+                    </p>
+                </li>
+                <li>
+                    <p>Все текстовые и графические материалы на сайте <em>squizduos.com</em>, если иное не указано отдельно, доступны по лицензии 
+                        <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0</a> 
+                        («С указанием авторства — Некоммерческая — Без производных»). Это означает, что, если иное не указано отдельно, вы <strong>можете</strong>
+                        копировать текстовые материалы с этого сайта в некоммерческих целях при условии указания авторства и гиперссылки на первоисточник 
+                        (сайт <em>squizduos.com</em> или конкретную страницу на сайте). За разрешением на использование материала <strong>в коммерческих целях</strong>
+                        вы можете обратиться, написав письмо на адрес электронной почты <a href="mailto:me@squizduos.com" class="bold">me@squizduos.com</a>.
+                    </p>
+                </li>
+                <li>
+                    <p>На сайте <em>squizduos.com</em> установлен код сервиса статистики Google Analytics <strong>для анализа посещаемости и активности пользователей
+                        сайта</strong> с целью улучшения качества работы сайта. Такие данные подпадают под 4-ю категорию персональных данных (обезличенные и (или)
+                        общедоступные персональные данные). Данный сервис не собирает какую-либо информацию, на сбор которой установлены законодательные ограничения.
+                        Для получения дополнительных сведений о сборе данных сервисом Google Analytics ознакомьтесь с документами 
+                        <a href="https://policies.google.com/">«Политика конфиденциальности и Условия использования Google»</a>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        На сайте <em>squizduos.com</em> используется плагин «Disqus» <strong>для комментирования публикаций</strong>. Данный сервис не собирает
+                        какую-либо информацию, на сбор которой установлены законодательные ограничения. Для получения дополнительных сведений о сборе данных сервисом
+                        Disqus ознакомьтесь с документами <a href="https://help.disqus.com/en/articles/1717102-terms-of-service">«Disqus’ Terms of Service for Users 
+                        and Publishers»</a> и <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy">«Disqus Privacy Policy»</a>.
+                    </p>
+                </li>
+                <li>
+                    <p>Организация <em>«Squizduos Labs LLC.»</em>, упоминаемая в материалах сайта, является <strong>вымышленной</strong> и не аффилирована
+                        ни с каким реально существующим физическим или юридическим лицом.
+                    </p>
+                </li>
+            </ol>
         </div>
-    
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("legal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+      
 </div>
