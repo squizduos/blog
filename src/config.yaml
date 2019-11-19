@@ -5,6 +5,7 @@ canonifyurls: true
 paginate: 10
 languageCode: ru-ru
 theme: squizduos
+paginate: 5
 
 permalinks:
   post: '/blog/:filename/'
