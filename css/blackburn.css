@@ -1,0 +1,153 @@
+.header {
+  font-family: "Raleway", Helvetica, Arial, sans-serif
+}
+
+a {
+  color: #3b8bba;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a:visited {
+  color: #265778;
+}
+
+.small-print {
+  font-size: 0.8em;
+  margin: 0.6em;
+}
+
+.post-meta {
+  font-size: 90%;
+}
+
+article > footer {
+  text-align: right;
+}
+
+.prev-next-post {
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.prev-next-post .prev {
+  float: left;
+  text-align: left;
+  overflow: hidden;
+}
+
+.prev-next-post .next {
+  float: right;
+  text-align: right;
+  overflow: hidden;
+}
+
+#menu {
+  overflow-y: visible;
+}
+
+#menu a {
+  padding: 0.6em;
+}
+
+#menu .pure-menu-title {
+  display: block;
+  border: none;
+  padding: 0.6em;
+  margin: 0;
+  font-size: 16px;
+}
+
+#menu .brand {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  background: transparent;
+  text-decoration: none;
+  margin: 0.5em 0;
+}
+
+#menu .pure-menu {
+  font-size: 0.9em;
+}
+
+#menu .pure-menu ul.pure-menu-children {
+  border-top: none;
+}
+
+i {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.pagination a {
+  color: #265778;
+}
+
+/* Site horizontal main menu */
+.site-nav {
+	line-height: 56px;
+}
+
+.site-nav .menu-icon {
+	display: none;
+}
+
+.site-nav .page-link {
+	color: #111;
+  line-height: 1.5;
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+.site-nav .page-link:not(:last-child) {
+	margin-right: 20px;
+}
+
+/* Table of contents */
+
+#TableOfContents {
+  text-align: center;
+  /* padding: 2.5em 2em 0; */
+  border-bottom: 1px solid #eee;
+}
+
+#TableOfContents ul li  {
+  display: inline;
+}
+
+#TableOfContents ul li:before {
+	content: '\00a0\2022\00a0\00a0';
+	color:#999;
+	color:rgba(0,0,0,0.5);
+	font-size:22px;
+}
+
+#TableOfContents ul li:first-child:before {
+	content: ' ';
+}
+
+#TableOfContents ul li a{
+  margin-left: 5px;
+  margin-right: 5px;
+
+  white-space: nowrap;
+  line-height: 1.5;
+
+  font: 400 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
